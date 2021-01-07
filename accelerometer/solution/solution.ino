@@ -1,5 +1,5 @@
 /********************************************************************/
-// 1. On inclut les librairies utilisées 
+// 1. On inclut les librairies utilisées
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_ADXL345_U.h>
@@ -13,13 +13,13 @@ float ya = 0;
 float za = 0;
 /********************************************************************/
 
-void setup(void) 
-{ 
+void setup(void)
+{
    // 4. on ouvre le port série et définit le débit de données à 9600 bps
   Serial.begin(9600);
-  Serial.println("ADXL345 Accelerometer Calibration"); 
+  Serial.println("ADXL345 Accelerometer Calibration");
   Serial.println("");
-  
+
    // 5. Initialisation du capteur
   if(!accel.begin())
   {
@@ -31,25 +31,27 @@ void setup(void)
 
 void loop(void)
 {
-    
+
     // 6. Obtenir un nouvel evenement du capteur
-    sensors_event_t accelEvent;  
+    sensors_event_t accelEvent;
     accel.getEvent(&accelEvent);
 
     // 7. Valeurs x, y et z captées par l'evenement de l'acceleromètre
     float xa = accelEvent.acceleration.x;
     float ya = accelEvent.acceleration.y;
     float za = accelEvent.acceleration.z;
-    
+
     //8. Calcul pour obtenir l'acceleration totale
-    float at = sqrt(xa*xa + ya*ya + za*za);          
-   
-    Serial.print("X Axis: "); 
+    float at = sqrt(xa*xa + ya*ya + za*za);
+
+    Serial.print("X Axis: ");
     Serial.println(xa);
-    Serial.print("Y Axis: "); 
+    Serial.print("Y Axis: ");
     Serial.println(ya);
-    Serial.print("Z Axis: "); 
+    Serial.print("Z Axis: ");
     Serial.println(za);
-    Serial.print("Total Acceleration: "); 
+    Serial.print("Total Acceleration: ");
     Serial.println(at);
+
+    delay(400);
 }
