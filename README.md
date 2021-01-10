@@ -1,8 +1,8 @@
-#IoMT
+# IoMT
 
 
 
-###IoMT : les bénéfices, l’utilité, les évolutions
+### IoMT : les bénéfices, l’utilité, les évolutions
 
 
 
@@ -22,14 +22,14 @@ Chaque TP possède sa propre branche. Les étapes sont les suivantes :
 
 
 
-###B2MR
+### B2MR
 
-#####ESGI 5 MOC :
+##### ESGI 5 MOC :
 
 - Cylia BOUKHIBA
 - Viviana MONTIEL
 - Fabiana MONTIEL
--  Benjamin ROUSVAL
+- Benjamin ROUSVAL
 
 
 
