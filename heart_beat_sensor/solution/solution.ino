@@ -31,7 +31,6 @@ void loop()
   //On définit des valeurs temporaires à nos variables
   //Elles seront modifiées ensuite lors de la prise de mesure
   static float oldValue = 0;
-  static float oldChange = 0;
 
   unsigned long currentMillis = millis();
 
@@ -70,6 +69,5 @@ void loop()
   maxx = maxx * 0.98;
 
   oldValue=value;
-  oldChange=change;
   delay(period);
 }
