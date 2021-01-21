@@ -1,0 +1,14 @@
+{
+  "name": "scriptjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connection_mqtt_script.js",
+  "scripts": {
+    "start": "nodemon connection_mqtt_script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^4.2.4"
+  }
+}
