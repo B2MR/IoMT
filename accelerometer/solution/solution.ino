@@ -11,6 +11,7 @@ Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
 float xa = 0;
 float ya = 0;
 float za = 0;
+float at = 0;
 /********************************************************************/
 
 void setup(void)
@@ -37,12 +38,12 @@ void loop(void)
     accel.getEvent(&accelEvent);
 
     // 7. Valeurs x, y et z captées par l'evenement de l'acceleromètre
-    float xa = accelEvent.acceleration.x;
-    float ya = accelEvent.acceleration.y;
-    float za = accelEvent.acceleration.z;
+    xa = accelEvent.acceleration.x;
+    ya = accelEvent.acceleration.y;
+    za = accelEvent.acceleration.z;
 
     //8. Calcul pour obtenir l'acceleration totale
-    float at = sqrt(xa*xa + ya*ya + za*za);
+    at = sqrt(xa*xa + ya*ya + za*za);
 
     Serial.print("X Axis: ");
     Serial.println(xa);
