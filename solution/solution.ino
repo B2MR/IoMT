@@ -21,6 +21,7 @@ float xa = 0;
 float ya = 0;
 float za = 0;
 
+float at = 0;
 
 // Mise en place d'une instance oneWire pour communiquer avec n'importe quel autre device OneWire
 // (pas seulement les Circuits intégrés Maxim/Dallas Temperature)
@@ -93,12 +94,12 @@ void loop()
       accel.getEvent(&accelEvent);
 
       // Valeurs x, y et z captées par l'evenement de l'acceleromètre
-      float xa = accelEvent.acceleration.x;
-      float ya = accelEvent.acceleration.y;
-      float za = accelEvent.acceleration.z;
+      xa = accelEvent.acceleration.x;
+      ya = accelEvent.acceleration.y;
+      za = accelEvent.acceleration.z;
 
       // Calcul pour obtenir l'acceleration totale
-      float at = sqrt(xa*xa + ya*ya + za*za);
+      at = sqrt(xa*xa + ya*ya + za*za);
 
       Serial.println("********");
       Serial.print("X Axis: ");
