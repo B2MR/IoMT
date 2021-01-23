@@ -34,6 +34,8 @@ float xa = 0;
 float ya = 0;
 float za = 0;
 
+float at = 0;
+
 
 // Mise en place d'une instance oneWire pour communiquer avec n'importe quel autre device OneWire
 // (pas seulement les Circuits intégrés Maxim/Dallas Temperature)
